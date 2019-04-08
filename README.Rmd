@@ -1,0 +1,50 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# reprep
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+reprep helps automate the creation of a **rep**etitive **rep**orting package.
+
+## Installation
+
+Install the development version from GitHub with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("sharlagelfand/reprep")
+```
+
+## Usage
+
+`reprep` functions are wrappers for [`usethis` package](https://github.com/r-lib/usethis) functions and as such, also operate on the active project. If you used `reprep` to create a new package, that is the active project.
+
+The following shows how `reprep` can help create your own package for repetitive reporting.
+
+```{r}
+# Create a new package ---------------------------------------------------------
+reprep::reprep("~/ttcreport/")
+```
+
+```{r, include=FALSE}
+knitr::opts_knit$set(root.dir = "~/ttcreport/")
+```
+
+```{r}
+# Add a step to the package ----------------------------------------------------
+# (e.g. querying data, cleaning data, report writeup)
+reprep::step("query_data")
+```
