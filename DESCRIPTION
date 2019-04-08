@@ -1,0 +1,16 @@
+Package: reprep
+Title: Automate Repetitive Reporting Package Setup
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Sharla",
+           family = "Gelfand",
+           role = c("aut", "cre"),
+           email = "sharla.gelfand@gmail.com")
+Description: Automate setup tasks for creating an R package
+    for repetitive reporting
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    usethis
+RoxygenNote: 6.1.1
