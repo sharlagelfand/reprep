@@ -5,11 +5,11 @@
 #'
 #' @export
 step <- function(name, ext = "R"){
-  check_file_name(name)
+  usethis:::check_file_name(name)
 
-  package_name <- fs:::path_file(usethis:::path_prep(usethis::proj_get()))
-  usethis::use_template(template = "step",
-                        save_as = usethis::proj_path("R", name, ext = "R"),
+  package_name <- fs:::path_file(usethis::proj_get())
+  usethis::use_template(template = "step.R",
+                        save_as = paste0("R/", name, ".R"),
                         data = list(function_name = name,
                                     package_name = package_name),
                         open = TRUE,
